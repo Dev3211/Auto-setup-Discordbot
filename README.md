@@ -7,7 +7,8 @@ All you will have to do is execute the scripts from your console and the scripts
 # PHP setup
 If you want to use the PHP setup, the steps are pretty simple:
 
-1. Execute the setup.php using php setup.php from your console and enjoy your first setup of your Discord bot!
+1. Install PHP
+2. Execute the setup.php using 'php setup.php' from your console and enjoy your first setup of your Discord bot!
 
 # NodeJS setup
 
@@ -15,6 +16,6 @@ If you want to use the NODEJS setup, the steps are pretty simple:
 
 1. Install NodeJS and make sure your npm is up to date.
 2. execute npm i discord-auto
-3. execute the setup.js file using node setup.js from your console and enjoy your first setup of your Discord bot!
+3. execute the setup.js file using 'node setup.js' from your console and enjoy your first setup of your Discord bot!
 
 Credits: Dev3211(PHP version), Nuno135(NodeJS version).
