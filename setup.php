@@ -15,7 +15,7 @@ function Node()
     $output = shell_exec('curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash');
     echo " $output ";
 	
-	$output1 = shell_exec('sudo apt-get install -y nodejs');
+    $output1 = shell_exec('sudo apt-get install -y nodejs');
     echo " $output1 ";
 }
 
