@@ -9,21 +9,38 @@ function sendMessage($message)
     echo $message;
 }
 
+
+function Node()
+{
+    $output = shell_exec('curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash');
+    echo " $output ";
+	
+	$output1 = shell_exec('sudo apt-get install -y nodejs');
+    echo " $output1 ";
+}
+
+function Module()
+{
+    $output = shell_exec('npm install discord.js');
+    echo " $output ";
+}
+
+function start()
+{
+    $output = shell_exec('node bot.js');
+    echo " $output ";
+}
+
 sendMessage("Welcome to Auto Discord bot setup script");
 
 
 sendMessage("--------Installation--------");
 
 sendMessage("Installing NODEJS V8(Ignore this if your operating system is not Linux.)");
-$output = shell_exec('curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash');
-echo " $output ";
-
-$output1 = shell_exec('sudo apt-get install -y nodejs');
-echo " $output1 ";
+Node();
 
 sendMessage("Installing DiscordJS module(Ignore this if your operating system is not Linux.)");
-$output = shell_exec('npm install discord.js');
-echo " $output ";
+Module();
 
 sendMessage("--------Configuration Setup--------");
 
@@ -32,7 +49,7 @@ $prefix = trim(fgets(STDIN));
 echo "\n";
 echo " Enter your token, make sure you created the app: ";
 $token = trim(fgets(STDIN));
-echo "\n";
+echo "\n"; 
 
 sendMessage("--------Creating the  file--------");
 
@@ -86,6 +103,5 @@ while (!in_array($protocol, $answer)) {
     $protocol = strtolower($protocol);
 }
 
-$output = shell_exec('node bot.js');
-echo " $output ";
+start();
 ?>
